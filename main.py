@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 class ModelSegment:
-    def __init__(self, pt = "best.pt", img = 'test_image.jpg'):
+    def __init__(self, pt = "best.pt", img = "test_image.jpg"):
         self.best_w = pt
         self.image_path = img
 
