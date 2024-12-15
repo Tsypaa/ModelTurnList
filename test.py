@@ -1,5 +1,4 @@
 from main import ModelSegment
 
-model = ModelSegment(img="test_image2.jpg")
-
-model.segment_turnlist()
+model = ModelSegment(image_path="test_image.jpg")
+model.segment_tornlist()
