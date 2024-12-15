@@ -52,17 +52,17 @@ class ModelSegment:
             # Проверяем, есть ли класс "torn" (предполагая, что "torn" имеет индекс, например, 0)
             # Вам нужно будет заменить 0 на фактический индекс класса "torn" в вашей модели
             if any(cls == 0 for cls in detected_classes):  # Замените 0 на индекс класса "torn"
-                print("да")
+                return True
             else:
-                print("нет")
-
-            annotated_image = results[0].plot()
-            desired_width = 1080
-            desired_height = 720
-            annotated_image = cv2.resize(annotated_image, (desired_width, desired_height))
-            cv2.imshow("YOLO Inference", annotated_image)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()
+                return False
+               
+            # annotated_image = results[0].plot()
+            # desired_width = 1080
+            # desired_height = 720
+            # annotated_image = cv2.resize(annotated_image, (desired_width, desired_height))
+            # cv2.imshow("YOLO Inference", annotated_image)
+            # cv2.waitKey(0)
+            # cv2.destroyAllWindows()
 
         except FileNotFoundError as e:
             print(f"Error: {e}")
